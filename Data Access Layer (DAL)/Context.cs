@@ -15,15 +15,6 @@ namespace Data_Access_Layer__DAL_
         {
         }
 
-        //protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
-        //{
-        //    optionsBuilder.UseSqlite("FileName=studentDB1", option =>
-        //    {
-        //        option.MigrationsAssembly(Assembly.GetExecutingAssembly().FullName);
-        //    });
-        //    base.OnConfiguring(optionsBuilder);
-        //}
-
         public DbSet<Classes> Classes { get; set; }
         public DbSet<Countries> Countries { get; set; }
         public DbSet<Students> Students { get; set; }

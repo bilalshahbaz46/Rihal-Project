@@ -15,4 +15,8 @@
     <ProjectReference Include="..\Business Object Layer (BOL)\Business Object Layer (BOL).csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Data\" />
+  </ItemGroup>
+
 </Project>

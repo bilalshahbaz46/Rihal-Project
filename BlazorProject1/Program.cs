@@ -1,4 +1,3 @@
-using BlazorProject1.Data;
 using Data_Access_Layer__DAL_;
 using Microsoft.AspNetCore.Components;
 using Microsoft.AspNetCore.Components.Web;
@@ -15,17 +14,6 @@ namespace BlazorProject1
             CreateDbIfNotExists(host);
 
             host.Run();
-
-            //using var dbcontext = new Context();
-
-            //var student = dbcontext.Students.ToList();
-            //var classes = dbcontext.Classes.ToList();
-            //var countries = dbcontext.Countries.ToList();
-
-            //foreach (var s in dbcontext.Students)
-            //{
-            //    Console.WriteLine($"StudentID: {s.Id}, StudentName: {s.Name}, DOB: {s.DateOfBirth.ToString()}, ClassName: {s.Class.ClassName}, CountryName: {s.Country.Name}");
-            //}
         }
 
         public static IHostBuilder CreateHostBuilder(string[] args) =>
