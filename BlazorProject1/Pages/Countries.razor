@@ -1,0 +1,40 @@
+﻿@page "/countrylist"
+@using Business_Logic_layer__BLL_.DTOs.Countries
+
+@inject Business_Logic_layer__BLL_.Services.Interfaces.ICountryRepo _countryService;
+
+<h3>Countries List</h3>
+<p>The List of countries where we are providing our curriculum.</p>
+<table class="table">
+    <thead>
+        <tr>
+            <td><b>Id</b></td>
+            <td><b>Name</b></td>
+            <td><b>Student Count</b></td>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach(var i in list)
+        {
+            <tr>
+                <td>@i.Id</td>
+                <td>@i.Name</td>
+                <td>@StudentCount(i.Id)</td>
+            </tr>
+
+        }
+    </tbody>
+</table>
+
+@code {
+    private List<CountryDto> list;
+
+    protected override void OnInitialized()
+    {
+        list = _countryService.GetAll();
+    }
+    private long StudentCount(Guid id)
+    {
+        return _countryService.GetStudentCount(id);
+    }
+}

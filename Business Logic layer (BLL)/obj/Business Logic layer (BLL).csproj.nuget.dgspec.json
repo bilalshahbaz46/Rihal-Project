@@ -1,0 +1,197 @@
+{
+  "format": 1,
+  "restore": {
+    "D:\\Work\\Oman\\BlazorProject1\\Business Logic layer (BLL)\\Business Logic layer (BLL).csproj": {}
+  },
+  "projects": {
+    "D:\\Work\\Oman\\BlazorProject1\\Business Logic layer (BLL)\\Business Logic layer (BLL).csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\Work\\Oman\\BlazorProject1\\Business Logic layer (BLL)\\Business Logic layer (BLL).csproj",
+        "projectName": "Business Logic layer (BLL)",
+        "projectPath": "D:\\Work\\Oman\\BlazorProject1\\Business Logic layer (BLL)\\Business Logic layer (BLL).csproj",
+        "packagesPath": "C:\\Users\\Bilal(Techverx)\\.nuget\\packages\\",
+        "outputPath": "D:\\Work\\Oman\\BlazorProject1\\Business Logic layer (BLL)\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\Bilal(Techverx)\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {
+              "D:\\Work\\Oman\\BlazorProject1\\Business Object Layer (BOL)\\Business Object Layer (BOL).csproj": {
+                "projectPath": "D:\\Work\\Oman\\BlazorProject1\\Business Object Layer (BOL)\\Business Object Layer (BOL).csproj"
+              },
+              "D:\\Work\\Oman\\BlazorProject1\\Data Access Layer (DAL)\\Data Access Layer (DAL).csproj": {
+                "projectPath": "D:\\Work\\Oman\\BlazorProject1\\Data Access Layer (DAL)\\Data Access Layer (DAL).csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "dependencies": {
+            "AutoMapper.Extensions.Microsoft.DependencyInjection": {
+              "target": "Package",
+              "version": "[11.0.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.101\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "D:\\Work\\Oman\\BlazorProject1\\Business Object Layer (BOL)\\Business Object Layer (BOL).csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\Work\\Oman\\BlazorProject1\\Business Object Layer (BOL)\\Business Object Layer (BOL).csproj",
+        "projectName": "Business Object Layer (BOL)",
+        "projectPath": "D:\\Work\\Oman\\BlazorProject1\\Business Object Layer (BOL)\\Business Object Layer (BOL).csproj",
+        "packagesPath": "C:\\Users\\Bilal(Techverx)\\.nuget\\packages\\",
+        "outputPath": "D:\\Work\\Oman\\BlazorProject1\\Business Object Layer (BOL)\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\Bilal(Techverx)\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.101\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "D:\\Work\\Oman\\BlazorProject1\\Data Access Layer (DAL)\\Data Access Layer (DAL).csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\Work\\Oman\\BlazorProject1\\Data Access Layer (DAL)\\Data Access Layer (DAL).csproj",
+        "projectName": "Data Access Layer (DAL)",
+        "projectPath": "D:\\Work\\Oman\\BlazorProject1\\Data Access Layer (DAL)\\Data Access Layer (DAL).csproj",
+        "packagesPath": "C:\\Users\\Bilal(Techverx)\\.nuget\\packages\\",
+        "outputPath": "D:\\Work\\Oman\\BlazorProject1\\Data Access Layer (DAL)\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\Bilal(Techverx)\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {
+              "D:\\Work\\Oman\\BlazorProject1\\Business Object Layer (BOL)\\Business Object Layer (BOL).csproj": {
+                "projectPath": "D:\\Work\\Oman\\BlazorProject1\\Business Object Layer (BOL)\\Business Object Layer (BOL).csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "dependencies": {
+            "Faker.Net": {
+              "target": "Package",
+              "version": "[2.0.154, )"
+            },
+            "Microsoft.EntityFrameworkCore.Sqlite": {
+              "target": "Package",
+              "version": "[6.0.1, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.101\\RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

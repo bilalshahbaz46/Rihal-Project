@@ -1,0 +1,26 @@
+{
+  "Version": 1,
+  "ProjectMap": {
+    "09d9b1a1-3529-4420-a604-b567f764b5a1": {
+      "ProjectGuid": "09d9b1a1-3529-4420-a604-b567f764b5a1",
+      "DisplayName": "Business Logic layer (BLL)",
+      "ColorIndex": 0
+    },
+    "1bf903ee-b5e5-4136-970e-9116ad0c6b1b": {
+      "ProjectGuid": "1bf903ee-b5e5-4136-970e-9116ad0c6b1b",
+      "DisplayName": "BlazorProject1",
+      "ColorIndex": 1
+    },
+    "dfcbaa63-e9ba-4fed-9e54-0a90db90d97f": {
+      "ProjectGuid": "dfcbaa63-e9ba-4fed-9e54-0a90db90d97f",
+      "DisplayName": "Business Object Layer (BOL)",
+      "ColorIndex": 2
+    },
+    "5ada9de2-1006-48ca-8b18-380c7e5d6f67": {
+      "ProjectGuid": "5ada9de2-1006-48ca-8b18-380c7e5d6f67",
+      "DisplayName": "Data Access Layer (DAL)",
+      "ColorIndex": 3
+    }
+  },
+  "NextColorIndex": 4
+}
