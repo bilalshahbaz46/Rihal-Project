@@ -84,8 +84,8 @@
                 {
                     Name = student.Name,
                     DateOfBirth = student.DateOfBirth,
-                    ClassId = selectedClass.Id,
-                    CountryId = selectedCountry.Id
+                    ClassId = selectedClass == null ? classes.First().Id : selectedClass.Id,
+                    CountryId = selectedCountry == null ? countries.First().Id : selectedCountry.Id
                 };
             _studentService.Create(entry);
             Navigation.NavigateTo("/studentlist");
