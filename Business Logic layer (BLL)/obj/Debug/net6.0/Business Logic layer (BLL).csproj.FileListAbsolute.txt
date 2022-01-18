@@ -1,0 +1,17 @@
+D:\Work\Oman\BlazorProject1\Business Logic layer (BLL)\bin\Debug\net6.0\Business Logic layer (BLL).deps.json
+D:\Work\Oman\BlazorProject1\Business Logic layer (BLL)\bin\Debug\net6.0\Business Logic layer (BLL).dll
+D:\Work\Oman\BlazorProject1\Business Logic layer (BLL)\bin\Debug\net6.0\ref\Business Logic layer (BLL).dll
+D:\Work\Oman\BlazorProject1\Business Logic layer (BLL)\bin\Debug\net6.0\Business Logic layer (BLL).pdb
+D:\Work\Oman\BlazorProject1\Business Logic layer (BLL)\bin\Debug\net6.0\Business Object Layer (BOL).dll
+D:\Work\Oman\BlazorProject1\Business Logic layer (BLL)\bin\Debug\net6.0\Data Access Layer (DAL).dll
+D:\Work\Oman\BlazorProject1\Business Logic layer (BLL)\bin\Debug\net6.0\Business Object Layer (BOL).pdb
+D:\Work\Oman\BlazorProject1\Business Logic layer (BLL)\bin\Debug\net6.0\Data Access Layer (DAL).pdb
+D:\Work\Oman\BlazorProject1\Business Logic layer (BLL)\obj\Debug\net6.0\Business Logic layer (BLL).csproj.AssemblyReference.cache
+D:\Work\Oman\BlazorProject1\Business Logic layer (BLL)\obj\Debug\net6.0\Business Logic layer (BLL).GeneratedMSBuildEditorConfig.editorconfig
+D:\Work\Oman\BlazorProject1\Business Logic layer (BLL)\obj\Debug\net6.0\Business Logic layer (BLL).AssemblyInfoInputs.cache
+D:\Work\Oman\BlazorProject1\Business Logic layer (BLL)\obj\Debug\net6.0\Business Logic layer (BLL).AssemblyInfo.cs
+D:\Work\Oman\BlazorProject1\Business Logic layer (BLL)\obj\Debug\net6.0\Business Logic layer (BLL).csproj.CoreCompileInputs.cache
+D:\Work\Oman\BlazorProject1\Business Logic layer (BLL)\obj\Debug\net6.0\Business Logic layer (BLL).csproj.CopyComplete
+D:\Work\Oman\BlazorProject1\Business Logic layer (BLL)\obj\Debug\net6.0\Business Logic layer (BLL).dll
+D:\Work\Oman\BlazorProject1\Business Logic layer (BLL)\obj\Debug\net6.0\ref\Business Logic layer (BLL).dll
+D:\Work\Oman\BlazorProject1\Business Logic layer (BLL)\obj\Debug\net6.0\Business Logic layer (BLL).pdb

@@ -3,13 +3,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.0.32014.148
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlazorProject1", "BlazorProject1\BlazorProject1.csproj", "{1BF903EE-B5E5-4136-970E-9116AD0C6B1B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BlazorProject1", "BlazorProject1\BlazorProject1.csproj", "{1BF903EE-B5E5-4136-970E-9116AD0C6B1B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Data Access Layer (DAL)", "Data Access Layer (DAL)\Data Access Layer (DAL).csproj", "{5ADA9DE2-1006-48CA-8B18-380C7E5D6F67}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Data Access Layer (DAL)", "Data Access Layer (DAL)\Data Access Layer (DAL).csproj", "{5ADA9DE2-1006-48CA-8B18-380C7E5D6F67}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Business Object Layer (BOL)", "Business Object Layer (BOL)\Business Object Layer (BOL).csproj", "{DFCBAA63-E9BA-4FED-9E54-0A90DB90D97F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Business Object Layer (BOL)", "Business Object Layer (BOL)\Business Object Layer (BOL).csproj", "{DFCBAA63-E9BA-4FED-9E54-0A90DB90D97F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Business Logic layer (BLL)", "Business Logic layer (BLL)\Business Logic layer (BLL).csproj", "{09D9B1A1-3529-4420-A604-B567F764B5A1}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Business Logic layer (BLL)", "Business Logic layer (BLL)\Business Logic layer (BLL).csproj", "{09D9B1A1-3529-4420-A604-B567F764B5A1}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

@@ -6,6 +6,8 @@
 
 <h3>Classes List</h3>
 <p>These are the list of the classes we are currently offering in our University's curriculum.</p>
+<br/>
+<a href="class/0" style="font-size:20px"> Add New Class </a>
 <table class="table">
     <thead>
         <tr>
@@ -21,6 +23,7 @@
                 <td>@i.Id</td>
                 <td>@i.ClassName</td>
                 <td>@StudentCount(i.Id)</td>
+                <td><a href="class/@i.Id.ToString()">Edit</a></td>
             </tr>
 
         }

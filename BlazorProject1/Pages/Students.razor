@@ -6,11 +6,12 @@
 <h3>Students List</h3>
 <p>We are proud of the Student we Teach here. We have Briliant Students who have passed out to be some of very successful people around the World.</p>
 
-<p align="center" style="border:thick; border-width:5px; border-style:solid; padding:25px; font-size:20px"><b>Average age of a Student: @AverageAge()</b></p>
+<p align="center" style="border:thick; border-width:5px; border-style:solid; padding:25px; font-size:20px"><b>Average age of a Student: @averageAge</b></p>
+<br/>
+<a href="student/0" style="font-size:20px"> Add New Student </a>
 <table class="table">
     <thead>
         <tr>
-            <td><b>Id</b></td>
             <td><b>Name</b></td>
             <td><b>Date Of Birth</b></td>
             <td><b>Class</b></td>
@@ -21,11 +22,13 @@
         @foreach(var i in list)
         {
             <tr>
-                <td>@i.Id</td>
                 <td>@i.Name</td>
                 <td>@i.DateOfBirth.Date</td>
                 <td>@GetClassCountry(i.Id).Item1</td>
                 <td>@GetClassCountry(i.Id).Item2</td>
+                <td><a href="student/@i.Id.ToString()">Edit</a></td>
+                <td><button @onclick=@(e => OnDelete(i.Id))>Delete</button></td>
+
             </tr>
 
         }
@@ -34,10 +37,12 @@
 
 @code {
     private List<StudentDto> list;
+    private int averageAge;
 
     protected override void OnInitialized()
     {
         list = _studentService.GetAll();
+        averageAge = _studentService.AverageAge();
     }
 
     private Tuple<string,string> GetClassCountry(Guid id)
@@ -45,8 +50,10 @@
         return _studentService.GetClassCountryName(id);
     }
 
-    private int AverageAge()
+    private void OnDelete(Guid id)
     {
-        return _studentService.AverageAge();
-    } 
+        _studentService.Delete(id);
+        list = _studentService.GetAll();
+        averageAge = _studentService.AverageAge();
+    }
 }

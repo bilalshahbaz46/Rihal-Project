@@ -1,0 +1,12 @@
+D:\Work\Oman\BlazorProject1\Business Object Layer (BOL)\bin\Debug\net6.0\Business Object Layer (BOL).deps.json
+D:\Work\Oman\BlazorProject1\Business Object Layer (BOL)\bin\Debug\net6.0\Business Object Layer (BOL).dll
+D:\Work\Oman\BlazorProject1\Business Object Layer (BOL)\bin\Debug\net6.0\ref\Business Object Layer (BOL).dll
+D:\Work\Oman\BlazorProject1\Business Object Layer (BOL)\bin\Debug\net6.0\Business Object Layer (BOL).pdb
+D:\Work\Oman\BlazorProject1\Business Object Layer (BOL)\obj\Debug\net6.0\Business Object Layer (BOL).csproj.AssemblyReference.cache
+D:\Work\Oman\BlazorProject1\Business Object Layer (BOL)\obj\Debug\net6.0\Business Object Layer (BOL).GeneratedMSBuildEditorConfig.editorconfig
+D:\Work\Oman\BlazorProject1\Business Object Layer (BOL)\obj\Debug\net6.0\Business Object Layer (BOL).AssemblyInfoInputs.cache
+D:\Work\Oman\BlazorProject1\Business Object Layer (BOL)\obj\Debug\net6.0\Business Object Layer (BOL).AssemblyInfo.cs
+D:\Work\Oman\BlazorProject1\Business Object Layer (BOL)\obj\Debug\net6.0\Business Object Layer (BOL).csproj.CoreCompileInputs.cache
+D:\Work\Oman\BlazorProject1\Business Object Layer (BOL)\obj\Debug\net6.0\Business Object Layer (BOL).dll
+D:\Work\Oman\BlazorProject1\Business Object Layer (BOL)\obj\Debug\net6.0\ref\Business Object Layer (BOL).dll
+D:\Work\Oman\BlazorProject1\Business Object Layer (BOL)\obj\Debug\net6.0\Business Object Layer (BOL).pdb

@@ -1,0 +1,59 @@
+﻿@page "/class/{id}"
+@using Business_Logic_layer__BLL_.DTOs.Classes
+@using Business_Logic_layer__BLL_.DTOs.Countries
+@inject Business_Logic_layer__BLL_.Services.Interfaces.IClassRepo _classService;
+@inject NavigationManager Navigation;
+
+<h2>Class Info</h2>
+
+<EditForm Model="_class" OnSubmit="SubmitForm">
+    <div>
+        <label>Id</label>
+        <input id="id" class="form-control" name="id" value="@_class.Id" readonly />
+    </div>
+    <div>
+        <label> Class Name</label>
+        <InputText id="name" class="form-control" name="name" @bind-Value="@_class.ClassName"></InputText>
+    </div>
+    <br />
+    <button type="submit" class="btn btn-primary">Update</button>
+</EditForm>
+
+@code {
+    [Parameter]
+    public string Id { get; set; }
+
+    private ClassDto _class { get; set; }
+
+    protected override void OnInitialized()
+    {
+        if (Id == "0")
+        {
+            _class = new ClassDto();
+        }
+        else
+        {
+            _class = _classService.GetById(Guid.Parse(Id));
+        }
+    }
+
+    private void SubmitForm()
+    {
+        if(_class.Id == Guid.Empty)
+        {
+            var entry = new AddClassDto()
+                {
+                    ClassName = _class.ClassName
+                };
+
+            _classService.Create(entry);
+            Navigation.NavigateTo("/classlist");
+        }
+        else
+        {
+            _classService.Update(_class);
+            Navigation.NavigateTo("/classlist");
+        }
+
+    }
+}

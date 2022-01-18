@@ -1,0 +1,15 @@
+D:\Work\Oman\BlazorProject1\Data Access Layer (DAL)\bin\Debug\net6.0\Data Access Layer (DAL).deps.json
+D:\Work\Oman\BlazorProject1\Data Access Layer (DAL)\bin\Debug\net6.0\Data Access Layer (DAL).dll
+D:\Work\Oman\BlazorProject1\Data Access Layer (DAL)\bin\Debug\net6.0\ref\Data Access Layer (DAL).dll
+D:\Work\Oman\BlazorProject1\Data Access Layer (DAL)\bin\Debug\net6.0\Data Access Layer (DAL).pdb
+D:\Work\Oman\BlazorProject1\Data Access Layer (DAL)\bin\Debug\net6.0\Business Object Layer (BOL).dll
+D:\Work\Oman\BlazorProject1\Data Access Layer (DAL)\bin\Debug\net6.0\Business Object Layer (BOL).pdb
+D:\Work\Oman\BlazorProject1\Data Access Layer (DAL)\obj\Debug\net6.0\Data Access Layer (DAL).csproj.AssemblyReference.cache
+D:\Work\Oman\BlazorProject1\Data Access Layer (DAL)\obj\Debug\net6.0\Data Access Layer (DAL).GeneratedMSBuildEditorConfig.editorconfig
+D:\Work\Oman\BlazorProject1\Data Access Layer (DAL)\obj\Debug\net6.0\Data Access Layer (DAL).AssemblyInfoInputs.cache
+D:\Work\Oman\BlazorProject1\Data Access Layer (DAL)\obj\Debug\net6.0\Data Access Layer (DAL).AssemblyInfo.cs
+D:\Work\Oman\BlazorProject1\Data Access Layer (DAL)\obj\Debug\net6.0\Data Access Layer (DAL).csproj.CoreCompileInputs.cache
+D:\Work\Oman\BlazorProject1\Data Access Layer (DAL)\obj\Debug\net6.0\Data Access Layer (DAL).csproj.CopyComplete
+D:\Work\Oman\BlazorProject1\Data Access Layer (DAL)\obj\Debug\net6.0\Data Access Layer (DAL).dll
+D:\Work\Oman\BlazorProject1\Data Access Layer (DAL)\obj\Debug\net6.0\ref\Data Access Layer (DAL).dll
+D:\Work\Oman\BlazorProject1\Data Access Layer (DAL)\obj\Debug\net6.0\Data Access Layer (DAL).pdb

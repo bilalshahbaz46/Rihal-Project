@@ -1,0 +1,122 @@
+﻿@page "/student/{id}"
+@using Business_Logic_layer__BLL_.DTOs.Classes
+@using Business_Logic_layer__BLL_.DTOs.Countries
+@using Business_Logic_layer__BLL_.DTOs.Students
+@inject Business_Logic_layer__BLL_.Services.Interfaces.IStudentRepo _studentService;
+@inject Business_Logic_layer__BLL_.Services.Interfaces.IClassRepo _classService;
+@inject Business_Logic_layer__BLL_.Services.Interfaces.ICountryRepo _countryService;
+@inject NavigationManager Navigation;
+
+<h2>Student Info</h2>
+
+
+<EditForm Model="student" OnSubmit="SubmitForm">
+    <div>
+        <label>Id</label>
+        <input id="id" class="form-control" name="id" value="@student.Id" readonly />
+    </div>
+    <div>
+        <label>Name</label>
+        <InputText id="name" class="form-control" name="name" @bind-Value="@student.Name"></InputText>
+    </div>
+    <div>
+        <label>Date Of Birth</label>
+        <input class="form-control" type="datetime-local" id="DOB" name="DateOfBirth" @bind-value="@student.DateOfBirth">
+    </div>
+    <br/>
+    <div>
+        <label>Class</label>
+        <select onchange="@ChangingClass" style="margin-left: 1rem">
+            @foreach (var c in classes)
+            {
+                <option selected="@IsSelectedClass(c)" value="@c.Id">@c.ClassName</option>
+            }
+        </select>
+    </div>
+    <br/>
+    <div>
+        <label>Country</label>
+        <select onchange="@ChangingCountry" style="margin-left: 1rem">
+            @foreach (var c in countries)
+            {
+                <option selected="@IsSelectedCountry(c)" value="@c.Id">@c.Name</option>
+            }
+        </select>
+    </div>
+    <br />
+    <button type="submit" class="btn btn-primary">Update</button>
+</EditForm>
+
+@code {
+    [Parameter]
+    public string Id { get; set; }
+
+    private StudentDto student { get; set; }
+    private List<ClassDto> classes { get; set; }
+    private List<CountryDto> countries { get; set; }
+    private ClassDto selectedClass { get; set; }
+    private CountryDto selectedCountry { get; set; }
+
+    protected override void OnInitialized()
+    {
+        classes = _classService.GetAll();
+        countries = _countryService.GetAll();
+
+        if (Id == "0")
+        {
+            student = new StudentDto();
+        }
+        else
+        {
+            student = _studentService.GetById(Guid.Parse(Id));
+
+            selectedClass = classes.FirstOrDefault(x => x.Id == student.ClassId);
+            selectedCountry = countries.FirstOrDefault(x => x.Id == student.CountryId);
+        }
+
+    }
+
+    private void SubmitForm()
+    {
+        if(student.Id == Guid.Empty)
+        {
+            var entry = new AddStudentDto()
+                {
+                    Name = student.Name,
+                    DateOfBirth = student.DateOfBirth,
+                    ClassId = selectedClass.Id,
+                    CountryId = selectedCountry.Id
+                };
+            _studentService.Create(entry);
+            Navigation.NavigateTo("/studentlist");
+        }
+        else
+        {
+            student.ClassId = selectedClass.Id;
+            student.CountryId = selectedCountry.Id;
+            _studentService.Update(student);
+            Navigation.NavigateTo("/studentlist");
+        }
+
+    }
+
+    private bool IsSelectedClass(ClassDto c)
+    {
+        return c == selectedClass;
+    }
+
+    private void ChangingClass(ChangeEventArgs e)
+    {
+        selectedClass = classes.FirstOrDefault(x => x.Id == Guid.Parse(e.Value.ToString()));
+    }
+
+    private bool IsSelectedCountry(CountryDto c)
+    {
+        return c == selectedCountry;
+    }
+
+    private void ChangingCountry(ChangeEventArgs e)
+    {
+        selectedCountry = countries.FirstOrDefault(x => x.Id == Guid.Parse(e.Value.ToString()));
+    }
+}

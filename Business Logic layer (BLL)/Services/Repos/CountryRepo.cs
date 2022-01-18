@@ -63,13 +63,11 @@ namespace Business_Logic_layer__BLL_.Services.Repos
 
         public void Update(CountryDto request)
         {
-            var oldEntity = _context.Countries.FirstOrDefault(x => x.Id == request.Id);
-            if (oldEntity != null)
-            {
-                oldEntity = _mapper.Map<Countries>(request);
-                oldEntity.ModifiedTime = DateTime.Now;
-                _context.SaveChanges();
-            }
+            var entity = _context.Countries.FirstOrDefault(x => x.Id == request.Id);
+            entity.Name = request.Name;
+            entity.ModifiedTime = DateTime.Now;
+            _context.SaveChanges();
+
         }
     }
 }

@@ -64,13 +64,11 @@ namespace Business_Logic_layer__BLL_.Services.Repos
 
         public void Update(ClassDto request)
         {
-            var oldEntity = _context.Classes.FirstOrDefault(x => x.Id == request.Id);
-            if (oldEntity != null)
-            {
-                oldEntity = _mapper.Map<Classes>(request);
-                oldEntity.ModifiedTime = DateTime.Now;
-                _context.SaveChanges();
-            }
+            var entity = _context.Classes.FirstOrDefault(x => x.Id == request.Id);
+            entity.ClassName = request.ClassName;
+            entity.ModifiedTime = DateTime.Now;
+            _context.SaveChanges();
+
         }
     }
 }

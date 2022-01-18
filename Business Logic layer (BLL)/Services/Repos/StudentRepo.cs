@@ -34,8 +34,21 @@ namespace Business_Logic_layer__BLL_.Services.Repos
         public void Create(AddStudentDto request)
         {
             var entity = _mapper.Map<Students>(request);
+            entity.Id = Guid.NewGuid();
+            entity.Class = _context.Classes.FirstOrDefault(x => x.Id == request.ClassId);
+            entity.Country = _context.Countries.FirstOrDefault(x => x.Id == request.CountryId);
             entity.CreatedTime = DateTime.Now;
+
             _context.Students.Add(entity);
+
+            //Adding Student to the class
+            _context.Classes.FirstOrDefault(x => x.Id == request.ClassId)
+                .Students.Add(entity);
+
+            //Adding Student to the country
+            _context.Countries.FirstOrDefault(x => x.Id == request.CountryId)
+                .Students.Add(entity);
+
             _context.SaveChanges();
         }
 
@@ -45,6 +58,13 @@ namespace Business_Logic_layer__BLL_.Services.Repos
             if (entity != null)
             {
                 _context.Students.Remove(entity);
+
+                //Removing Student from class
+                _context.Classes.FirstOrDefault(x => x.Id == entity.ClassId).Students.Remove(entity);
+
+                //Removing Student from country
+                _context.Countries.FirstOrDefault(x => x.Id == entity.CountryId).Students.Remove(entity);
+
                 _context.SaveChanges();
             }
         }
@@ -73,13 +93,24 @@ namespace Business_Logic_layer__BLL_.Services.Repos
 
         public void Update(StudentDto request)
         {
-            var oldEntity = _context.Students.FirstOrDefault(x => x.Id == request.Id);
-            if (oldEntity != null)
-            {
-                oldEntity = _mapper.Map<Students>(request);
-                oldEntity.ModifiedTime = DateTime.Now;
-                _context.SaveChanges();
-            }
+            var entity = _context.Students.FirstOrDefault(x => x.Id == request.Id);
+            entity.Name = request.Name;
+            entity.DateOfBirth = request.DateOfBirth;
+            entity.ClassId = request.ClassId;
+            entity.CountryId = request.CountryId;
+            entity.ModifiedTime = DateTime.Now;
+            entity.Class = _context.Classes.FirstOrDefault(x => x.Id == request.ClassId);
+            entity.Country = _context.Countries.FirstOrDefault(x => x.Id == request.CountryId);
+
+            //Adding Student to the class
+            _context.Classes.FirstOrDefault(x => x.Id == request.ClassId)
+                .Students.Add(entity);
+
+            //Adding Student to the country
+            _context.Countries.FirstOrDefault(x => x.Id == request.CountryId)
+                .Students.Add(entity);
+
+            _context.SaveChanges();
         }
 
         private int GetAge(DateTime dob)

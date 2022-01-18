@@ -1,0 +1,58 @@
+﻿@page "/country/{id}"
+@using Business_Logic_layer__BLL_.DTOs.Countries
+@inject Business_Logic_layer__BLL_.Services.Interfaces.ICountryRepo _countryService;
+@inject NavigationManager Navigation;
+
+<h2>country Info</h2>
+
+<EditForm Model="_country" OnSubmit="SubmitForm">
+    <div>
+        <label>Id</label>
+        <input id="id" class="form-control" name="id" value="@_country.Id" readonly />
+    </div>
+    <div>
+        <label> Class Name</label>
+        <InputText id="name" class="form-control" name="name" @bind-Value="@_country.Name"></InputText>
+    </div>
+    <br />
+    <button type="submit" class="btn btn-primary">Update</button>
+</EditForm>
+
+@code {
+    [Parameter]
+    public string Id { get; set; }
+
+    private CountryDto _country { get; set; }
+
+    protected override void OnInitialized()
+    {
+        if (Id == "0")
+        {
+            _country = new CountryDto();
+        }
+        else
+        {
+            _country = _countryService.GetById(Guid.Parse(Id));
+        }
+    }
+
+    private void SubmitForm()
+    {
+        if(_country.Id == Guid.Empty)
+        {
+            var entry = new AddCountryDto()
+                {
+                    Name = _country.Name
+                };
+
+            _countryService.Create(entry);
+            Navigation.NavigateTo("/countrylist");
+        }
+        else
+        {
+            _countryService.Update(_country);
+            Navigation.NavigateTo("/countrylist");
+        }
+
+    }
+}
